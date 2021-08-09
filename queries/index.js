@@ -4,7 +4,14 @@ const Model = require("../model")
 const Asset = Model.Asset
 const getAssets = ( req, res ) =>
 {
-    Asset.findAll().then( asset =>
+    Asset.findAll(
+        {
+            include:[
+                {model:Model.GeoJsonFeature},
+                {model:Model.WMTS}
+            ]
+        }
+    ).then( asset =>
         {
             res.json(asset)
         })

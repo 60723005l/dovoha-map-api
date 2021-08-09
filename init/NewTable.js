@@ -7,19 +7,20 @@ const { readFile } = require('fs').promises
 
 
 const Assetcontents = [
-    { name: '1904-日治臺灣堡圖(明治版)-1:20,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1904-jpg-{z}-{x}-{y}', data: ""},
-    { name: '1904-日治臺灣堡圖(大正版)-1:20,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1921-jpg-{z}-{x}-{y}', data: ""},
-    { name: '1966-Corona衛星影像', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=Taiwan_Corona_1966-jpg-{z}-{x}-{y}', data: ""},
-    { name: '1989-臺灣經建1版地形圖-1:25,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1989-jpg-{z}-{x}-{y}', data: ""},
-    { name: '1993-臺灣經建2版地形圖-1:25,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1993-jpg-{z}-{x}-{y}', data: ""},
-    { name: '2001-臺灣經建3版地形圖-1:25,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_2001-jpg-{z}-{x}-{y}', data: ""},
-    { name: '臺灣通用電子地圖(套疊等高線)', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/EMAP5_OPENDATA/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
-    { name: '正射影像圖(通用)', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/PHOTO2/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
-    { name: '國土利用調查成果圖', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/LUIMAP/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
-    { name: '民雄人物', type: 'GeoJson',group:'點位圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄人物.geojson"},
-    { name: '民雄POI', type: 'GeoJson',group:'點位圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄POI.geojson"},
-    { name: '民雄鄉', type: 'GeoJson',group:'行政區界', tag: "BaseVector,default show,no popup", url: '', data: "../asset/Minsyong_town.geojson"},
-    { name: '民雄村里', type: 'GeoJson',group:'行政區界', tag: "BaseVector,default show,no popup", url: '', data:"../asset/Minsyong_village.geojson"},
+    // { name: '1904-日治臺灣堡圖(明治版)-1:20,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1904-jpg-{z}-{x}-{y}', data: ""},
+    // { name: '1904-日治臺灣堡圖(大正版)-1:20,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1921-jpg-{z}-{x}-{y}', data: ""},
+    // { name: '1966-Corona衛星影像', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=Taiwan_Corona_1966-jpg-{z}-{x}-{y}', data: ""},
+    // { name: '1989-臺灣經建1版地形圖-1:25,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1989-jpg-{z}-{x}-{y}', data: ""},
+    // { name: '1993-臺灣經建2版地形圖-1:25,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_1993-jpg-{z}-{x}-{y}', data: ""},
+    // { name: '2001-臺灣經建3版地形圖-1:25,000', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_2001-jpg-{z}-{x}-{y}', data: ""},
+    // { name: '臺灣通用電子地圖(套疊等高線)', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/EMAP5_OPENDATA/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
+    // { name: '正射影像圖(通用)', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/PHOTO2/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
+    // { name: '國土利用調查成果圖', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/LUIMAP/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
+    // { name: '民雄人物', type: 'GeoJson',group:'點位圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄人物.geojson"},
+    // { name: '民雄POI', type: 'GeoJson',group:'點位圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄POI.geojson"},
+    // { name: '民雄鄉', type: 'GeoJson',group:'行政區界', tag: "BaseVector,default show,no popup", url: '', data: "../asset/Minsyong_town.geojson"},
+    // { name: '民雄村里', type: 'GeoJson',group:'行政區界', tag: "BaseVector,default show,no popup", url: '', data:"../asset/Minsyong_village.geojson"},
+    { name: '東南亞美食', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show,no popup", url: '', data:"../asset/southeastasia.geojson"},
 ]
 
 
