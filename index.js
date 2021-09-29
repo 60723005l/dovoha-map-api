@@ -16,8 +16,10 @@ const options = {
 };
 app.use(formData.parse(options));
 
-
-const base = '/webgis/minsyong/backend/api'
+// this is for jsdc official server
+// const base = '/webgis/minsyong/backend/api' 
+//this is for dovoha school server
+const base = '/api'
 app.get( base+"/assets" , query.getAssets )
 
 app.get( base+"/mapdata" , query.getMapDataByAssetId )
