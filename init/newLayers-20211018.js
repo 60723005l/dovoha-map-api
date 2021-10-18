@@ -7,17 +7,8 @@ const { readFile } = require('fs').promises
 
 
 const Assetcontents = [
-    { name: '民雄人物', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄人物.geojson"},
-    { name: '民雄村里', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show,no popup", url: '', data:"../asset/Minsyong_village.geojson"},
-    { name: '民雄鄉', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show,no popup", url: '', data: "../asset/Minsyong_town.geojson"},
-    { name: '東南亞美食', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show", url: '', data:"../asset/southeastasia.geojson"},
-    { name: '開放街圖（OSM）', type: 'WMTS',group:'影像圖資', tag: "Basemap", url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png	', data: ""},
-    { name: 'Corona衛星影像（1966年）', type: 'WMTS',group:'影像圖資', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=Taiwan_Corona_1966-jpg-{z}-{x}-{y}', data: ""},
-    { name: '經建3版地形圖（2001年）', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=TM25K_2001-jpg-{z}-{x}-{y}', data: ""},
-    { name: '臺灣堡圖（1921年）', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1921-jpg-{z}-{x}-{y}', data: ""},
-    { name: '臺灣通用電子地圖', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/EMAP5/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
-    { name: '臺灣堡圖（1904年）', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://gis.sinica.edu.tw/tileserver/file-exists.php?img=JM20K_1904-jpg-{z}-{x}-{y}', data: ""},
-    { name: '正射影像圖(通用)', type: 'WMTS',group:'底圖', tag: "Basemap", url: 'https://wmts.nlsc.gov.tw/wmts/PHOTO2/default/GoogleMapsCompatible/{z}/{y}/{x}.png', data: ""},
+    { name: '民雄人物', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄人物-20211018.geojson"},
+    { name: '民雄街區走踏路線', type: 'GeoJson',group:'向量圖資', tag: "BaseVector,default show", url: '', data: "../asset/民雄街區走踏路線-20211018.geojson"},
     
 ]
 
